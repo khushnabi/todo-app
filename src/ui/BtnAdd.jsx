@@ -1,14 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const BtnAddElement = styled.a`
+const BtnAdd = styled.a`
+	--size: 30px;
 	display: inline-block;
-	padding: 10px;
+	height: var(--size);
+	width: var(--size);
+	line-height: var(--size);
+	text-align: center;
 	:hover {
-		border-radius: 50%;
-		background-color: rgba(0, 0, 0, 0.08);
+		background-color: rgba(0, 0, 0, 0.3);
 	}
+	border-radius: 50%;
 	transform: rotate(${(props) => (props.active ? '45' : 0)}deg);
+	transition: transform 0.3s;
 `;
 
 export default function BtnAdd(props) {

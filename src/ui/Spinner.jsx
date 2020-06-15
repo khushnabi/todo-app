@@ -1,5 +1,5 @@
-import React from 'react';
+import React from "react";
 
-export default function Spinner() {
-	return <i className="fa fa-reload" />;
+export default function Spinner(props) {
+    return <i style={props.style} className="fa fa-spinner fa-spin" />;
 }
