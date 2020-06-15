@@ -2,14 +2,7 @@ import React, { useState } from 'react';
 import Axios from 'axios';
 import slugify from 'slugify';
 import styled from 'styled-components';
-
-const BtnAdd = styled.a`
-	padding: 10px;
-	:hover {
-		background-color: rgba(0, 0, 0, .3);
-	}
-	transform: rotate(${(props) => (props.active ? '45' : 0)}deg);
-`;
+import BtnAdd from '../ui/BtnAdd';
 
 const CreateProject = (props) => {
 	const [ isAdding, setIsAdding ] = useState(false);
@@ -24,6 +17,9 @@ const CreateProject = (props) => {
 			setName('');
 			setIsAdding(false);
 		});
+	};
+	const setAdding = () => {
+		setIsAdding(!isAdding);
 	};
 
 	return (
@@ -41,7 +37,7 @@ const CreateProject = (props) => {
 					</form>
 				</div>
 			)}
-			<BtnAdd active={isAdding} onClick={() => setIsAdding(!isAdding)}>
+			<BtnAdd isAdding={isAdding} setIsAdding={setAdding}>
 				<i className="fa fa-plus" aria-hidden="true" />
 			</BtnAdd>
 		</div>
