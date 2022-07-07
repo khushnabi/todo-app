@@ -4,7 +4,7 @@
         "axios": "^0.19.2",
         "lodash-es": "^4.17.15",
         "lodash-move": "^1.1.1",
-        "moment": "^2.24.0",
+        "moment": "^2.29.4",
         "prop-types": "^15.5.7",
         "react": "^0.14.0 || ^15.0.0 || ^16.0.0",
         "react-addons-css-transition-group": "^15.6.2",
